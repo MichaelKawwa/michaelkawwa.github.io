@@ -1,3 +1,9 @@
 .App {
   text-align: center;
 }
+
+.desktop {
+  background-color: rgb(244, 193, 202);
+  height: 100vh;
+  overflow: hidden;
+}
