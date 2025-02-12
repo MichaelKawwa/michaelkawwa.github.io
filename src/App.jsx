@@ -4,12 +4,15 @@ import './App.css'
 import { AppBar, Button, Toolbar, MenuList, MenuListItem, Separator, TextInput, Hourglass, styleReset } from 'react95';
 import { createGlobalStyle, ThemeProvider, styled } from 'styled-components';
 
+import Clock from './components/Clock';
+
 import peggysPastels from 'react95/dist/themes/peggysPastels';
 
 import logoIMG from './assets/logo.png';
 
 import ms_sans_serif from 'react95/dist/fonts/ms_sans_serif.woff2';
 import ms_sans_serif_bold from 'react95/dist/fonts/ms_sans_serif_bold.woff2';
+import Me from './components/Me';
 
 const GlobalStyles = createGlobalStyle`
   ${styleReset}
@@ -42,7 +45,9 @@ function App() {
           <nav>
             <AppBar style={{ zIndex: 3, padding: '5px' }}>
               <Toolbar style={{ justifyContent: 'space-between' }}>
-            <div style={{ position: 'relative', display: 'inline-block' }}>
+              <div style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
+              <Me />
+              <div style={{ position: 'relative'}}>
               <Button
                 onClick={() => setOpen(!open)}
                 active={open}
@@ -86,8 +91,9 @@ function App() {
                 </MenuList>
               )}
             </div>
+            </div>
 
-            <TextInput placeholder='Search...' width={150} />
+            <Clock />
           </Toolbar>
             </AppBar>
           </nav>
