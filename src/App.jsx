@@ -6,9 +6,11 @@ import { createGlobalStyle, ThemeProvider, styled } from 'styled-components';
 
 import Clock from './components/Clock';
 
-import peggysPastels from 'react95/dist/themes/peggysPastels';
+import original from 'react95/dist/themes/original';
 
 import logoIMG from './assets/logo.png';
+import github_logo from '/github-mark.png'
+import linkedin_logo from '/LI-In-Bug.png'
 
 import ms_sans_serif from 'react95/dist/fonts/ms_sans_serif.woff2';
 import ms_sans_serif_bold from 'react95/dist/fonts/ms_sans_serif_bold.woff2';
@@ -37,13 +39,14 @@ const GlobalStyles = createGlobalStyle`
 function App() {
 
   const [open, setOpen] = useState(false);
+  const [openSocials, setOpenSocials] = useState(false);
 
     return(
-      <div className='desktop' style={{ background: peggysPastels.desktopBackground }}>
+      <div className='desktop' style={{ background: original.desktopBackground }}>
         <GlobalStyles />
-        <ThemeProvider theme={peggysPastels}>
+        <ThemeProvider theme={original}>
           <nav>
-            <AppBar style={{ zIndex: 3, padding: '5px' }}>
+            <AppBar style={{ zIndex: 3, padding: '2.5px' }}>
               <Toolbar style={{ justifyContent: 'space-between' }}>
               <div style={{ position: 'relative', display: 'inline-flex', alignItems: 'center', gap: 10 }}>
               <Me />
@@ -67,29 +70,62 @@ function App() {
                     left: '0',
                     top: '100%'
                   }}
-                  onClick={() => setOpen(false)}
                 >
-                  <MenuListItem>
+                  <MenuListItem onClick={() => setOpen(false)}> 
                     <span role='img' aria-label='👨‍💻'>
                       👨‍💻
                     </span>
                      Michael
                   </MenuListItem>
-                  <MenuListItem>
+                  <MenuListItem onClick={() => setOpen(false)}>
                     <span role='img' aria-label='📁'>
                       📁
                     </span>
                     Resume
                   </MenuListItem>
-                  <Separator />
-                  <MenuListItem disabled>
-                    <span role='img' aria-label='🔙'>
-                      🔙
+                  <MenuListItem onClick={() => setOpen(false)}>
+                    <span role='img' aria-label='🛠️'>
+                      🛠️
                     </span>
-                    Logout
+                    Projects
+                  </MenuListItem>
+                  <Separator />
+                  <MenuListItem onClick={() => setOpenSocials(!openSocials)}>
+                    <span role='img' aria-label='📱'>
+                      📱
+                    </span>
+                    Socials
+                  </MenuListItem>
+                  <Separator />
+                  <MenuListItem onClick={() => setOpen(false)}>
+                    <span role='img' aria-label='📧'>
+                      📧
+                    </span>
+                    Email
                   </MenuListItem>
                 </MenuList>
               )}
+      {open && openSocials && (
+      <MenuList 
+      style={{
+        position: 'absolute',
+        left: '125%',
+        top: '400%'
+        }}>
+       <MenuListItem onClick={() =>setOpenSocials(false)}>
+          <a href='https://github.com/MichaelKawwa' style={{ textDecoration: 'none', color: 'inherit', display: 'inline-flex', gap: '10px', alignItems: 'center' }}>
+         <img src={github_logo} alt="github"/>
+          Github
+          </a>
+        </MenuListItem>
+        <MenuListItem onClick={() =>setOpenSocials(false)}>
+        <a href='https://www.linkedin.com/in/michael-kawwa-6734b7255/' style={{ textDecoration: 'none', color: 'inherit', display: 'inline-flex', gap: '10px', alignItems: 'center' }}>
+         <img src={linkedin_logo} alt="linkedin"/>
+          Linkedin
+        </a>
+        </MenuListItem>
+      </MenuList>
+      )};
             </div>
             </div>
 
