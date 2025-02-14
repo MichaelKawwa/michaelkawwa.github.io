@@ -11,7 +11,6 @@ import { createGlobalStyle, ThemeProvider, styled } from 'styled-components';
 
 import ms_sans_serif from 'react95/dist/fonts/ms_sans_serif.woff2';
 import ms_sans_serif_bold from 'react95/dist/fonts/ms_sans_serif_bold.woff2';
-import Me from './components/Me';
 
 const GlobalStyles = createGlobalStyle`
   ${styleReset}
@@ -31,6 +30,7 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'ms_sans_serif';
   }
 `;
+
 
 
 function App() {
