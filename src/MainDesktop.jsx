@@ -2,9 +2,10 @@ import { useState } from 'react'
 import './App.css'
 
 import { AppBar, Button, Toolbar, MenuList, MenuListItem, Separator, TextInput, Hourglass, styleReset } from 'react95';
-import { createGlobalStyle, ThemeProvider, styled } from 'styled-components';
+import { createGlobalStyle, ThemeProvider, styled, css } from 'styled-components';
 
 import Clock from './components/Clock';
+import AboutMe from './components/AboutMe';
 
 import original from 'react95/dist/themes/original';
 
@@ -15,6 +16,22 @@ import linkedin_logo from '/LI-In-Bug.png'
 import ms_sans_serif from 'react95/dist/fonts/ms_sans_serif.woff2';
 import ms_sans_serif_bold from 'react95/dist/fonts/ms_sans_serif_bold.woff2';
 import Me from './components/Me';
+
+
+const size = {
+  small: 400,
+  medium: 900,
+  large: 1140
+}
+
+const media = Object.keys(size).reduce((acc, label) => {
+  acc[label] = (...args) => css`
+      @media (max-width: ${size[label]}px) {
+          ${css(...args)}
+      }
+  `
+  return acc;
+}, {});
 
 const GlobalStyles = createGlobalStyle`
   ${styleReset}
@@ -33,6 +50,23 @@ const GlobalStyles = createGlobalStyle`
   body, input, select, textarea {
     font-family: 'ms_sans_serif';
   }
+`;
+
+const MainDiv = styled.div`
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: auto 300px;
+  grid-gap: 40px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 40px;
+
+  ${media.medium`
+      grid-template-columns: 1fr;
+      grid-gap: 40px;
+      padding: 10px;
+      width: 95%;
+  `} 
 `;
 
 
@@ -133,6 +167,14 @@ function MainDesktop() {
           </Toolbar>
             </AppBar>
           </nav>
+        
+        <MainDiv>
+
+
+        <AboutMe />
+
+       </MainDiv>
+
         </ThemeProvider>
         </div>
     );
