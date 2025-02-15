@@ -10,6 +10,8 @@ import MyPhoto from './components/MyPhoto';
 import MePokedex from './components/MePokedex';
 import Me from './components/Me';
 import Resume from './components/Resume';
+import Contact from './components/Contact';
+
 
 
 import original from 'react95/dist/themes/original';
@@ -41,7 +43,7 @@ const media = Object.keys(size).reduce((acc, label) => {
 
 const Wrapper = styled.div`
 
-  height: 70vh;
+  height: 80vh;
   width: 100%;
 
   padding: 7rem;
@@ -222,12 +224,6 @@ function MainDesktop() {
                     </span>
                     Resume
                   </MenuListItem>
-                  <MenuListItem onClick={() => setOpen(false)}>
-                    <span role='img' aria-label='🛠️'>
-                      🛠️
-                    </span>
-                    Projects
-                  </MenuListItem>
                   <MenuListItem onClick={() => { 
                   handleChange(2); 
                   setOpen(false); 
@@ -245,7 +241,10 @@ function MainDesktop() {
                     Socials
                   </MenuListItem>
                   <Separator />
-                  <MenuListItem onClick={() => setOpen(false)}>
+                  <MenuListItem onClick={() => { 
+                  handleChange(4); 
+                  setOpen(false); 
+                  }}>
                     <span role='img' aria-label='📧'>
                       📧
                     </span>
@@ -293,6 +292,8 @@ function MainDesktop() {
         {activeWindow == 2 && <MePokedex />}
 
         {activeWindow == 3 && <Resume />}
+
+        {activeWindow == 4 && <Contact />}
 
 
         </Wrapper>
