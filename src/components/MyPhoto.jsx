@@ -22,7 +22,8 @@ function MyPhoto() {
           </Button>
         </WindowHeader>
         <WindowContent>
-            <img src='/me.jpeg' width={500} height={450} alt="picture of me"></img>
+            <img src='/me2.jpeg' width={500} height={350} alt="picture of me"></img>
+            <h1 style={{fontSize: '20px'}}>Me!!!</h1>
         </WindowContent>
       </Window>
   )

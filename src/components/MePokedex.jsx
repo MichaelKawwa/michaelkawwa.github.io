@@ -23,32 +23,32 @@ function MePokedex() {
 	  <Table>
 		<TableHead>
 		  <TableRow>
-			<TableHeadCell>Type</TableHeadCell>
-			<TableHeadCell>Name</TableHeadCell>
-			<TableHeadCell disabled>Level</TableHeadCell>
+			<TableHeadCell>rank</TableHeadCell>
+			<TableHeadCell>skill</TableHeadCell>
+			<TableHeadCell>Mastery</TableHeadCell>
 		  </TableRow>
 		</TableHead>
 		<TableBody>
 		  <TableRow>
 			<TableDataCell style={{ textAlign: 'center' }}>
-			  <span role='img' aria-label='LEAF'>🌿</span>
+			<span role='img' aria-label='fire'>🔥</span>
 			</TableDataCell>
-			<TableDataCell>Bulbasaur</TableDataCell>
-			<TableDataCell>64</TableDataCell>
+			<TableDataCell>React JS</TableDataCell>
+			<TableDataCell>90%</TableDataCell>
 		  </TableRow>
 		  <TableRow>
 			<TableDataCell style={{ textAlign: 'center' }}>
-			  <span role='img' aria-label='fire'>🔥</span>
+			  <span role='img' aria-label='fire'>💯</span>
 			</TableDataCell>
-			<TableDataCell>Charizard</TableDataCell>
-			<TableDataCell>209</TableDataCell>
+			<TableDataCell>Java</TableDataCell>
+			<TableDataCell>100%</TableDataCell>
 		  </TableRow>
 		  <TableRow>
 			<TableDataCell style={{ textAlign: 'center' }}>
 			  <span role='img' aria-label='lightning'>⚡</span>
 			</TableDataCell>
-			<TableDataCell>Pikachu</TableDataCell>
-			<TableDataCell>82</TableDataCell>
+			<TableDataCell>Swift</TableDataCell>
+			<TableDataCell>85%</TableDataCell>
 		  </TableRow>
 		</TableBody>
 	  </Table>

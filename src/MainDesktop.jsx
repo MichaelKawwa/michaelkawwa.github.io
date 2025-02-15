@@ -8,6 +8,8 @@ import Clock from './components/Clock';
 import AboutMe from './components/AboutMe';
 import MyPhoto from './components/MyPhoto';
 import MePokedex from './components/MePokedex';
+import Me from './components/Me';
+import Resume from './components/Resume';
 
 
 import original from 'react95/dist/themes/original';
@@ -18,7 +20,7 @@ import linkedin_logo from '/LI-In-Bug.png'
 
 import ms_sans_serif from 'react95/dist/fonts/ms_sans_serif.woff2';
 import ms_sans_serif_bold from 'react95/dist/fonts/ms_sans_serif_bold.woff2';
-import Me from './components/Me';
+
 
 
 
@@ -211,7 +213,10 @@ function MainDesktop() {
                     </span>
                      Michael
                   </MenuListItem>
-                  <MenuListItem onClick={() => setOpen(false)}>
+                  <MenuListItem onClick={() => { 
+                  handleChange(3); 
+                  setOpen(false); 
+                  }}> 
                     <span role='img' aria-label='📁'>
                       📁
                     </span>
@@ -285,9 +290,9 @@ function MainDesktop() {
 
         {activeWindow == 1 && <MyPhoto />}
 
-
-
         {activeWindow == 2 && <MePokedex />}
+
+        {activeWindow == 3 && <Resume />}
 
 
         </Wrapper>
