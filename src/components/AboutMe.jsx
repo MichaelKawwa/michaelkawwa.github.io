@@ -17,6 +17,9 @@ import {
 import styled from 'styled-components';
 
 import { useState } from 'react';
+import AboutMeTab from './AboutMeTab';
+import Education from './Education';
+import Experience from './Experience';
 
 
 export default function AboutMe() {
@@ -32,39 +35,23 @@ export default function AboutMe() {
   return (
             <Window resizable className='window' style={{ width: '70%', height: '100%' }}>
             <WindowHeader className='window-title'>
-                <span>Me.exe</span>
-                <Button>
-                <span className='close-icon' />
-                </Button>
+                <span>All_About_Me.exe</span>
             </WindowHeader>
             <WindowContent >
                 <Tabs value={activeTab} onChange={handleChange}>
-          <Tab value={0}>Who Am I?</Tab>
-          <Tab value={1}>Experience</Tab>
-          <Tab value={2}>Education</Tab>
+          <Tab value={0}>Who Is Michael?</Tab>
+          <Tab value={1}>Education</Tab>
+          <Tab value={2}>Experience</Tab>
         </Tabs>
         <TabBody style={{ display: 'flex', flexDirection: 'column', flexGrow: 1, height: '100%', background: 'white' }}>
   {activeTab === 0 && (
-                 <ScrollView style={{ width: '100%', height: '400px' }}>
-                <h1 style={{margin: '20px', fontWeight:'bold', fontSize: '30px'}}>
-                <strong>Hey, I'm Michael!</strong></h1>
-                <Separator />
-                <p style={{margin: '20px', fontSize: '20px'}}>
-                When you set &quot;resizable&quot; prop, there will be drag handle
-                in the bottom right corner (but resizing itself must be handled by
-                you tho!)
-                </p>
-     </ScrollView>
+                <AboutMeTab />
   )}
   {activeTab === 1 && (
-    <div style={{ width: '100%', height: '100%' }}>
-      <div>Accesories stuff here</div>
-    </div>
+    <Education />
   )}
   {activeTab === 2 && (
-    <div style={{ width: '100%', height: '100%' }}>
-      <div>Clothing stuff here</div>
-    </div>
+    <Experience />
   )}
 </TabBody>
 
