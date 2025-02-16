@@ -7,7 +7,7 @@ export default function Experience() {
   return (
     <ScrollView style={{ width: '100%', height: '400px' }}>
         <h1 style={{margin: '20px', fontWeight:'bold', fontSize: '30px'}}>
-        <strong>Work Experience</strong></h1>
+        <strong>Work Experience 👨‍💻🏢</strong></h1>
         <Separator />
 
         <p style={{margin: '20px', fontSize: '20px'}}>

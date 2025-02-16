@@ -7,8 +7,10 @@ export default function Education() {
   return (
     <ScrollView style={{ width: '100%', height: '400px' }}>
     <h1 style={{margin: '20px', fontWeight:'bold', fontSize: '30px'}}>
-    <strong>Computer Science At Stony Brook University</strong></h1>
+    <strong>Computer Science At Stony Brook University 💻⚙️</strong></h1>
     <Separator />
+
+    <center><img src='/Stony_Brook_University_seal.svg'  alt="Stony Brook University"></img></center>
 
     <p style={{margin: '20px', fontSize: '20px'}}>
     It became clear to me before I started College that I wanted to study Computer Science. My earlier years had set a strong foundation already but I was ready for the next step in my career. This all started at Stony Brook University. 
@@ -18,7 +20,7 @@ export default function Education() {
     Currently I am in my third year here studying Computer Science. The program is known for being quite rigorous and competitive, a fact that might have concerned me in freshman year but now drives me to take pride in my learning journey! The challenges I faced and overcame helped make me a more competent and confident software developer. I now feel more equipped than ever in my abilities. I have fostered not only technical skills but soft skills which made me a better team player, collaborator, and communicator.    
     </p>
 
-    <h1 style={{margin: '20px', fontWeight:'bold', fontSize: '30px'}}>Course Work:</h1>
+    <h1 style={{margin: '20px', fontWeight:'bold', fontSize: '30px'}}>Course Work 📝👨‍🏫 </h1>
     <Separator />
 
 
@@ -42,7 +44,7 @@ export default function Education() {
     Courses like CSE 337 helped equip me with practical knowledge on web development in which we go in depth through the MERN stack, eventually creating a reddit clone called ‘phreddit’ as a final project with my teammate. Working with a teammate on this project using github helped me simulate a real workflow collaborating on a large software project. I learned efficient ways to divide tasks and resolve merge conflicts when they arise. Similarly I learned many practical skills in courses like CSE 337 in which we learned a wide array of scripting languages including, python, ruby, and bash. These skills are valuable and helped me easily and quickly create scripts for all kinds of different tasks.
     </p>
 
-    <h1 style={{margin: '20px', fontWeight:'bold', fontSize: '30px'}}>Extracurriculars:</h1>
+    <h1 style={{margin: '20px', fontWeight:'bold', fontSize: '30px'}}>Extracurriculars 🚀💯</h1>
     <Separator />
 
     <p style={{margin: '20px', fontSize: '20px'}}>
