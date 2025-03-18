@@ -15,6 +15,10 @@ export default function Experience() {
         </p>
 
         <p style={{margin: '20px', fontSize: '20px'}}>
+        Currently I am working as a student software engineer at the <span style={{fontWeight:'bold'}}>Stony Brook University TLT Media Lab</span>, The programs we create in this lab are a suite of applications that help both faculty and students enhance their teaching and learning experiences. Already I have helped optimize our LAMP stack build environment using ddev and Dockerfiles to automatically allow for admin authorization in the build environment to work with our IDP. This will transform how me and my team push our local changes to production.
+        </p>
+
+        <p style={{margin: '20px', fontSize: '20px'}}>
         During my internship at <span style={{fontWeight:'bold'}}>Pulp Chat</span>, a startup, dedicated to revolutionizing how we conversate and communicate using AI, I was given many large responsibilities and my first taste of professional software development. I solely led the development of a web application to be used by the other members of the company to preprocess and collect data. I learned to use flask and SQLite in the process. I had to ensure the reliability and security of the application due to how crucial it was to all the other operations happening at the company. This also introduced me to the importance of documenting my work and making sure my work meets the requirements of the team. Following this, I also got to work on the frontend of the application using React and Tailwind CSS, and database management using Prisma. I got to experience full stack web development in a professional environment. 
         </p>
 
