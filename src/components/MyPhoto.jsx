@@ -19,7 +19,7 @@ function MyPhoto() {
           <span>Me.jpeg</span>
         </WindowHeader>
         <WindowContent>
-            <img src='/me2.jpeg' width={500} height={350} alt="picture of me"></img>
+            <img src='/me3.png' width={500} height={350} alt="picture of me"></img>
             <h1 style={{fontSize: '20px'}}>Thats Me!</h1>
         </WindowContent>
       </Window>

@@ -9,7 +9,7 @@ function AboutMeTab() {
     <strong>Hey, I'm Michael 👋</strong></h1>
     <Separator />
 
-    <center><img src='/me2.jpeg' width={500} height={350} alt="picture of me"></img></center>
+    <center><img src='/me3.png' width={500} height={350} alt="picture of me"></img></center>
 
     <p style={{margin: '20px', fontSize: '20px'}}>
     Growing up I have always had a fascination with technology. Some of my earliest memories include taking apart old tv remotes, completely in awe of how a thin circuit board with funky looking metal pins and etchings on it can tell a tv what channel I want from across the room. It must have been magic, I thought.
