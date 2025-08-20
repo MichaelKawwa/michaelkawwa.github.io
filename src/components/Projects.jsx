@@ -1,10 +1,7 @@
 import React from "react";
 import { ScrollView, Separator, Button, Frame } from "react95";
 
-// CONTENT-ONLY Projects tab (no nested <Window>)
-// - Data-driven cards
-// - Tech chips + optional links (GitHub / Demo / Case Study)
-// - Fills TabBody and scrolls internally
+
 
 const PROJECTS = [
 
@@ -129,7 +126,7 @@ export default function Projects() {
     <ScrollView style={{ width: "100%", height: "100%" }}>
       <div style={styles.wrap}>
         <h1 style={{ fontWeight: "bold", fontSize: 28, margin: "12px 0" }}>Projects 🚧</h1>
-        <p>Selected builds across mobile, web, and automation. Each card lists stack + a quick summary; add GitHub/Demo links as you like.</p>
+        <p>Some of my recent Projects:</p>
         <Separator />
         <div style={styles.grid}>
           {PROJECTS.map((p) => (
