@@ -1,38 +1,54 @@
-import React from 'react'
+import React from "react";
+import { Window, WindowHeader, WindowContent, ScrollView, Separator } from "react95";
 
-import {ScrollView, Separator } from 'react95'
+/**
+ * Concise "About Me" tab.
+ * - Keeps personal storytelling, but trims verbosity
+ * - Highlights progression: early curiosity → iOS dev → web/software dev → CS undergrad
+ */
 
-function AboutMeTab() {
+export default function AboutMeTab() {
   return (
-    <ScrollView style={{ width: '100%', height: '400px' }}>
-    <h1 style={{margin: '20px', fontWeight:'bold', fontSize: '30px'}}>
-    <strong>Hey, I'm Michael 👋</strong></h1>
-    <Separator />
+        <ScrollView style={{ width: "100%", height: '100%' }}>
+          <div style={{ maxWidth: 960, margin: "0 auto", padding: 16 }}>
+            <h2 style={{ fontWeight: "bold", fontSize: 28, margin: "12px 0" }}>Hey, I'm Michael 👋</h2>
+            <Separator />
 
-    <center><img src='/me3.png' width={500} height={350} alt="picture of me"></img></center>
+            <div style={{ textAlign: "center", margin: "16px 0" }}>
+              <img
+                src="/me3.png"
+                width={420}
+                height={300}
+                alt="picture of me"
+                style={{ borderRadius: 4 }}
+              />
+            </div>
 
-    <p style={{margin: '20px', fontSize: '20px'}}>
-    Growing up I have always had a fascination with technology. Some of my earliest memories include taking apart old tv remotes, completely in awe of how a thin circuit board with funky looking metal pins and etchings on it can tell a tv what channel I want from across the room. It must have been magic, I thought.
-    </p>
+            <p>
+              I’ve always been fascinated by technology. As a kid, I dismantled old remotes trying to understand how a thin circuit
+              board could control a TV. That curiosity grew into a passion for building things of my own.
+            </p>
 
-    <p style={{margin: '20px', fontSize: '20px'}}>
-    As I grew a little older so did my curiosity. I would learn it isn’t really magic but light emitting diodes that enabled a tv remote to instantly communicate with a TV (and why these old tv remote were such a pain to use)!  Watching hours of youtube videos explaining science and technology filled my younger mind with all these little revelations of how the world around me worked. Like many other kids my age I spent much of my time getting lost in video games with my friends. Eventually I had my own ideas. No longer satisfied just playing video games I set out to make my own. This introduced me to the world of programming. Starting out with the game engine Unity and C# I spent much of my time in middle school learning and developing my own 2D and 3D games with unity for me and my friends to play. Eventually my passion for game development would develop into a greater fervor for software development in general. 
-    </p>
+            <p>
+              In middle school I discovered programming through <strong>Unity + C#</strong>, making 2D and 3D games for friends. By
+              high school, I was diving deep into <strong>iOS development</strong> with Swift and Xcode. My first published app,
+              <em>InsomniChat</em>, was built during sleepless nights sophomore year—teaching me backend basics and the grind of
+              shipping to the App Store.
+            </p>
 
-    <p style={{margin: '20px', fontSize: '20px'}}>
-    This would come following getting gifted my first personal IMac in my freshman year of high school. Being obsessed with all things apple at this point in my life, this gift would be a turning point in my life. I finally had the hardware to explore all my software interests. Entrenched in the apple ecosystem as I was, I naturally started getting into IOS development. Again, I found myself spending the majority of my time in freshman year learning, this time Swift  and Xcode, the main language and software development environment used for native IOS development. Having so many app ideas of my own I knew I had to learn everything there was to know about IOS development. This led to the release of my first app in sophomore year of highschool: InsomniChat. Struggling with insomnia at the time I decided to code away the long nights to make a chat app only for others awake past a certain hour. This project was one of my most ambitious and required backend knowledge which at the time was a mystery to me. After many sleepless nights and revisions my first app was finally accepted onto the app store. All my hard work paid off and I was ecstatic, sharing the app with all my friends and family. 
-    </p>
+            <p>
+              My interests expanded into <strong>web development</strong> with React.js, where I built sites for family and small
+              businesses, and <strong>automation</strong> with Python to solve everyday problems. Software became my universal tool
+              for creation and problem-solving.
+            </p>
 
-    <p style={{margin: '20px', fontSize: '20px'}}>
-    As time passed, I dipped into other areas of software development. I learned frontend web development with React JS. So when my cousin needed a website for his cafe I was able to step up to the occasion. Seeing how valuable my skill set was to our modern digital world, I started to offer my services to any friends and family who would benefit from them. I saw software as the ultimate tool to solve not only my day to day problems with things like automation programs using python but also helping those around me with their digital needs.     
-    </p>
-
-    <p style={{margin: '20px', fontSize: '20px'}}>
-    This background helped me immensely once I started College. As a current undergraduate student at Stony Brook University studying Computer Science, I can say that my background helped me not only to get ahead but also allowed me to learn more in my few years at college than I have in the many years before that. <span style={{ fontWeight:"bold" }}>Go to the Education tab to learn more about my learning journey here at Stony Brook.</span>
-    </p>
-
-</ScrollView>
-  )
+            <p>
+              Today, I’m a <strong>Computer Science undergrad at Stony Brook University</strong>. My early tinkering gave me a head
+              start, but my coursework and projects here sharpened my fundamentals in systems, algorithms, and security. I’ve
+              also grown as a teammate, collaborator, and communicator. <span style={{ fontWeight: "bold" }}>Check out the Education
+              tab for details on my academic journey.</span>
+            </p>
+          </div>
+        </ScrollView>
+  );
 }
-
-export default AboutMeTab

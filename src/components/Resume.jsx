@@ -9,7 +9,7 @@ function Resume() {
       <WindowHeader>Resume.pdf</WindowHeader>
       <WindowContent style={{ width: '90%', height: '80%' }}>
         <iframe
-          src='/Newest Michael Kawwa Resume copy.docx.pdf'
+          src='/michael_kawwa_resume.pdf'
           style={{ width: '100%', height: '100%' }}
         />
       </WindowContent>
